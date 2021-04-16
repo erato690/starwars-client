@@ -1,0 +1,32 @@
+server:
+  port: 8887
+  servlet:
+    context-path: /api
+
+spring:
+  profiles:
+    actives: local
+
+  data:
+    mongodb:
+      authentication-database: admin
+      username: starwars
+      password: starwars
+      database: starwars
+      port: 27017
+      host: localhost
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        home: /docs
+
+api:
+  client:
+    starwars:
+      queryLimit: 100
+      findAllLimit: 5
+      host: https://swapi.dev/api
+      starship: /starships
+      films: /films
